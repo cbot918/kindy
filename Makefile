@@ -4,6 +4,7 @@ image:
 
 pod:
 	kubectl apply -f pod.yaml
+##這步驟第一次創建會比較久
 
 service:
 	kubectl apply -f service.yaml

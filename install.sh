@@ -21,6 +21,9 @@ idocker(){
 		sudo apt-get install docker-ce docker-ce-cli containerd.io -y
     sudo docker run hello-world
 		sudo gpasswd -a $USER docker
+    sudo addgroup --system docker
+    sudo adduser $USER docker
+    newgrp docker
 }
 
 BINARY="go1.19.5.linux-amd64.tar.gz"
@@ -39,8 +42,7 @@ igo(){
 }
 
 ikind(){
-  . ~/.bashrc
-  go install sigs.k8s.io/kind@v0.17.0
+  /usr/local/go/bin/go install sigs.k8s.io/kind@v0.17.0
 }
 
 ikubectl(){
@@ -52,13 +54,13 @@ ikubectl(){
 }
 
 next(){
-  echo "install"
+  echo "$ source ~/.bashrc"
   echo "check below"
   echo "$ kind version"
   echo "$ kubectl version"
   echo "$ kind create cluster (wait a while)"
   echo "$ kubectl get all (should show result)"
-  echo "then see Makefile to use command"
+  echo "then follow Makefile's cmds "
 }
 
 icurl
@@ -67,8 +69,3 @@ igo
 ikind
 ikubectl
 next
-# curl
-# docker
-# go
-# kind
-# kubectl
