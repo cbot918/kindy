@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+metadata: 
+  name: auth
+  labels:
+    app: auth
+spec:
+  containers:
+  - name: auth
+    image: cbot918/auth
+    ports:
+      - containerPort: 8000
+  restartPolicy: Always
