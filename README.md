@@ -46,6 +46,8 @@ then follow Makefile
 <br/>
 
 ## Dependencies
+- [kind](https://kind.sigs.k8s.io/)
+- [kubectl](https://github.com/kubernetes/kubectl)
 - docker-image: cbot918/auth ( kind 抓不到 local docker image 所以得依賴 放在雲上的image )
 
 ## 測試環境
