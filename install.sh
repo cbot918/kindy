@@ -39,6 +39,7 @@ igo(){
 }
 
 ikind(){
+  . ~/.bashrc
   go install sigs.k8s.io/kind@v0.17.0
 }
 
@@ -51,6 +52,7 @@ ikubectl(){
 }
 
 next(){
+  echo "install"
   echo "check below"
   echo "$ kind version"
   echo "$ kubectl version"

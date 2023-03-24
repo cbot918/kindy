@@ -10,6 +10,7 @@ A Local K8S Bootstrap Template For Quick Learning
 
 ## Getting Started
 ```
+git clone https://github.com/cbot918/kindy && cd kindy
 ./install.sh
 make image
 ```
@@ -46,3 +47,7 @@ then follow Makefile
 
 ## Dependencies
 - docker-image: cbot918/auth ( kind 抓不到 local docker image 所以得依賴 放在雲上的image )
+
+## 測試環境
+1. ubuntu 20.04 ( native )
+2. virtualbox ubuntu 20.04 ( vm )
